@@ -1,0 +1,14 @@
+{"cell_id": "9289026679689183232"}
+
+User: pkgo-0
+access key id: AKIAIDE74HHXDXSKUQXQ
+secret access key: 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
+
+rds:
+DB instance indentifier: pkgo-0
+master username: pkgo0
+pw: mypkgo-0
+
+psql -h pkgo-0.c8yops2lyqcp.us-west-2.rds.amazonaws.com -p 5432 -U pkgo0
+INSERT INTO pokemon_map VALUES (1, 1, 1, 1, 1) ON CONFLICT (encounter_id) DO NOTHING;
+select * from pokemon_map;
