@@ -1,0 +1,11 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Ports": [
+    {
+      "ContainerPort": "8000"
+    }
+  ],
+  "Volumes": [
+  ],
+  "Logging": "/var/log/django"
+}
