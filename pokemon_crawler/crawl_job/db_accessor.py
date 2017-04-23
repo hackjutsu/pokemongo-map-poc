@@ -1,4 +1,5 @@
 import psycopg2
+import os
 
 # logging
 import logging
@@ -10,10 +11,10 @@ DBG = "-----> "
 # INSERT INTO pokemon_map (encounter_id , expire , pokemon_id , latitude , longitude ) VALUES (1,1,1,1,1) ON CONFLICT (encounter_id) DO NOTHING;
 def add_pokemon_to_db(encounter_id , expire , pokemon_id , latitude , longitude):
     # 1. Open connection
-    conn = psycopg2.connect(host = "pkgo-0.c8yops2lyqcp.us-west-2.rds.amazonaws.com",
-                            port = 5432,
-                            user = "pkgo0",
-                            password = "mypkgo-0")
+    conn = psycopg2.connect(host = os.environ['PKGO_DB_HOST'],
+                            port = os.environ['PKGO_DB_PORT'],
+                            user = os.environ['PKGO_DB_USER'],
+                            password = os.environ['PKGO_DB_PASSWORD'])
 
     # 2. Execute SQL
     with conn.cursor() as cur:
