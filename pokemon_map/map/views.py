@@ -46,10 +46,7 @@ def scan_area(north, south, west, east):
         return
 
     work_queue = boto3.resource(
-        'sqs', 
-        aws_access_key_id="AKIAIDE74HHXDXSKUQXQ",
-        aws_secret_access_key="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",
-        region_name='us-west-2').get_queue_by_name(QueueName=SQS_QUEUE_NAME)
+        'sqs', region_name='us-west-2').get_queue_by_name(QueueName=SQS_QUEUE_NAME)
 
     print DBG + "The work queue is "
     print DBG +  work_queue.url
