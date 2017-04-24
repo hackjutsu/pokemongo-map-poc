@@ -1,6 +1,6 @@
 # PokemonGo Map Query Server & Crawler Server
 
->Disclaimer: This is a POC(proof of concept) project for education purpose.
+>Disclaimer: This is a POC(proof of concept) project improved from [chenditic](https://github.com/chenditc)'s original design for education purpose.
 
 ![](./screenshot.png)
 
