@@ -6,6 +6,7 @@
 
 ## Demo
 http://hackjutsu.com/pokemongo-map-poc-demo/
+>Temporarily disabled to save my budget on AWS ;)
 
 ## Data source
 All Pokemon data, which are essentially fake, are generated randomly by a [mock API](https://github.com/hackjutsu/mock_pgoapi). In principle, there is no communction between the crawlers and the real Pokemon Go servers.
